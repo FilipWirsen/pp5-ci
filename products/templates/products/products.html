@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static  'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid product-container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font">Products</h2>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-4">
+            {{products}}
+        </div>
+        <div class="col-4">
+            {{products}}
+        </div>
+        <div class="col-4">
+            {{products}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
