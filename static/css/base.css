@@ -5,6 +5,7 @@ body, html {
   .bg { 
     /* The image used */
     background-image: url("https://cdn.pixabay.com/photo/2020/07/13/16/41/disc-golf-5401312_1280.jpg");
+    opacity: 90%;
     /* Full height */
     height: 100%; 
   
@@ -15,16 +16,10 @@ body, html {
   }
   
 /* Header styling */
-.nav-link {
-    color: #fff !important;
-}
 
-.navigation {
-    background-color: black;
-}
 
 /* Home page */
-.text-box {
+.image-text {
     margin-top: 15% !important;
 }
 
@@ -32,8 +27,86 @@ body, html {
     background: #424242 ;
     border-color: #424242;
 }
-
-@media (max-width: 991px) {
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
-/* navigation */
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* Home page image text on smaller screens*/
+@media (max-width: 990px) {
+
+    .image-text {
+        margin-top: 30% !important;
+    }
+}
+@media (max-width: 768px) {
+
+    .image-text {
+        margin-top: 50% !important;
+    }
+    .welcome-text {
+        display: none;
+    }
+}
