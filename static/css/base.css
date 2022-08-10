@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 body, html {
     height: 100%;
+    font-family: Oswald, sans-serif;
   }
   
   .bg { 
@@ -76,6 +79,7 @@ body, html {
 .bg-black {
     background: #000 !important;
 }
+
 
 /* -------------------------------- Media Queries */
 
