@@ -58,7 +58,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-4 mt-3 py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown d-none d-lg-inline-block">
                 <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -109,9 +109,21 @@
         </nav>
     </div>
 </header>
-  {% if messages %}
-  <div class="message-container"></div>
-  {% endif %}
+
+{% if messages %}
+<div class="message-container">
+    {% for message in messages %}
+        {% with message.level as level %}
+            {% if level == 40 %}
+            {% elif level == 30 %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% endif %}
+        {% endwith %}
+    {% endfor %}
+</div>
+{% endif %}
 
   {% block page_header %}
   {% endblock %}
@@ -120,6 +132,9 @@
   {% endblock %}
 
   {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
   {% endblock %}
 
 

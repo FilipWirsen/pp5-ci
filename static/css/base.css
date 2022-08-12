@@ -8,7 +8,7 @@ body, html {
   .bg { 
     /* The image used */
     background-image: url("https://cdn.pixabay.com/photo/2020/07/13/16/41/disc-golf-5401312_1280.jpg");
-    opacity: 90%;
+    opacity: 85%;
     /* Full height */
     height: 100%; 
   
@@ -113,4 +113,13 @@ body, html {
     .welcome-text {
         display: none;
     }
+}
+
+/* Toasts */
+
+.message-container {
+    position: absolute !important;
+    top: 12vh;
+    right: 2vh;
+    z-index: 1031; /* Since the header has fixed-top */
 }

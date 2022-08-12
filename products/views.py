@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
 
@@ -66,3 +67,14 @@ def product_detail(request, product_id):
         'product': product,
     }
     return render(request, 'products/product_detail.html', context)
+
+
+def delete_product(request, product_id):
+    """ Deletes product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only admins can do that...')
+        return redirect(reverse('home'))
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, f'Product {product.name} was deleted')
+    return redirect(reverse('products'))
