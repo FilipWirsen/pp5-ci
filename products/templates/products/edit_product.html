@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static  'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+ {% if user.is_superuser %}
+    <div class="col edit-form">
+        <div class="col-8">
+            <form action="{% url 'edit_product' product.id %}" method="POST" class="form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-black rounded-0">Update Product</button>
+                <button class="btn btn-outline-black rounded-0"><a href="{% url 'product_detail' product.id %}">Back to Product</a></button>
+            </form>
+        </div>
+    </div>
+ {% endif %}
+
+{% endblock %}

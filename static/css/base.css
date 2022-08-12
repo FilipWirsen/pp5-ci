@@ -79,7 +79,9 @@ body, html {
 .bg-black {
     background: #000 !important;
 }
-
+.edit-form {
+    margin-top: 170px;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -103,6 +105,10 @@ body, html {
 
     .image-text {
         margin-top: 30% !important;
+    }
+
+    .edit-form {
+        margin-top: 220px;
     }
 }
 @media (max-width: 768px) {

@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 from django.db.models import Q
 
 from .models import Product, Category
+from .forms import EditProductForm
 
 # Create your views here.
 
@@ -67,6 +68,30 @@ def product_detail(request, product_id):
         'product': product,
     }
     return render(request, 'products/product_detail.html', context)
+
+
+def edit_product(request, product_id):
+    """ Form to edit products """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only admins can do that...')
+        return redirect(reverse('home'))
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = EditProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Successfully updated {product.name}.')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = EditProductForm(instance=product)
+
+    context = {
+        'form': form,
+        'product': product
+    }
+    return render(request, 'products/edit_product.html', context)
 
 
 def delete_product(request, product_id):

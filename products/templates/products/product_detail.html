@@ -16,24 +16,28 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 {% if product.image %}
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}" alt="{{ product.name }}"/></div>
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}"
+                        alt="{{ product.name }}" /></div>
                 {% else %}
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimageplaceholder.png" alt="{{ product.name }}"/></div>
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimageplaceholder.png"
+                        alt="{{ product.name }}" /></div>
                 {% endif %}
                 <div class="col-md-6 product-details-box">
                     <div class="small mb-1"><strong>Sku:</strong> {{ product.sku }}</div>
                     <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
-                    <div class="fs-5 mb-5">
-                        <p><strong>Rating:</strong> {{product.rating}} / 5  <i class="fas fa-star"></i></p>
+                    <div class="fs-5 mb-2">
+                        <p><strong>Rating:</strong> {{product.rating}} / 5 <i class="fas fa-star"></i></p>
                         {% if product.discount_percentage %}
-                        <span class="text-decoration-line-through text-danger"><strong class="text-black">Discounted Price:</strong> {{ product.get_discounted_price|floatformat:2 }}$</span>
+                        <span class="text-decoration-line-through text-danger"><strong class="text-black">Discounted
+                                Price:</strong> {{ product.get_discounted_price|floatformat:2 }}$</span>
                         {% else %}
                         <span class="text-decoration-line-through"><strong>Price:</strong>{{product.price}}$</span>
                         {% endif %}
                     </div>
-                    <p class="lead"><strong>Product Description:</strong> <hr> {{product.description}}</p>
+                    <p class="lead"><strong>Product Description:</strong></p>
+                    <p class="border">{{product.description}}</p>
                     <div class="d-flex">
-    
+
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -43,15 +47,20 @@
                             </a>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
-                        {% if user.is_superuser %}
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'delete_product' product.id %}" class="btn btn-danger rounded-0 mt-5">
-                                        <i class="fas fa-trash"></i>
-                                    <span class="text-uppercase">Delete Product</span>
-                                </a>
-                            </div>
-                        {% endif %}
                     </div>
+                    {% if user.is_superuser %}
+                    <hr>
+                    <div class="col-md-12">
+                        <a href="{% url 'edit_product' product.id %}" class="btn btn-warning rounded-0 ">
+                            <i class="fas fa-edit"></i>
+                            <span class="text-uppercase">Edit Product</span>
+                        </a>
+                        <a href="{% url 'delete_product' product.id %}" class="btn btn-danger rounded-0">
+                            <i class="fas fa-trash"></i>
+                            <span class="text-uppercase">Delete Product</span>
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
