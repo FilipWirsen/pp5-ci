@@ -79,8 +79,8 @@ body, html {
 .bg-black {
     background: #000 !important;
 }
-.edit-form {
-    margin-top: 170px;
+.product-form {
+    margin-top: 170px !important;
 }
 
 /* -------------------------------- Media Queries */
@@ -107,8 +107,8 @@ body, html {
         margin-top: 30% !important;
     }
 
-    .edit-form {
-        margin-top: 220px;
+    .product-form {
+        margin-top: 220px !important;
     }
 }
 @media (max-width: 768px) {

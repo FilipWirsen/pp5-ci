@@ -5,22 +5,21 @@
 <link rel="stylesheet" href="{% static  'css/style.css' %}">
 {% endblock %}
 
-
 {% block content %}
  {% if user.is_superuser %}
     <div class="col product-form">
         <div class="row py-3">
             <div class="col text-center">
-                <h2 class="logo-font">Edit Product</h2>
+                <h2 class="logo-font">Add Product</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="col-8">
-            <form action="{% url 'edit_product' product.id %}" method="POST" class="form" enctype="multipart/form-data">
+            <form action="{% url 'add_product' %}" method="POST" class="form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn btn-black rounded-0">Update Product</button>
-                <button class="btn btn-outline-black rounded-0"><a href="{% url 'product_detail' product.id %}">Back to Product</a></button>
+                <button type="submit" class="btn btn-black rounded-0">Create Product</button>
+                <button class="btn btn-outline-black rounded-0"><a href="{% url 'products' %}">Back to Products</a></button>
             </form>
         </div>
     </div>

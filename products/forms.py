@@ -1,9 +1,9 @@
 from django import forms
-from .models import Product, Category
+from .models import Product
 
 
-class EditProductForm(forms.ModelForm):
-    """ Form to edit products """
+class ProductForm(forms.ModelForm):
+    """ Form to add and edit products """
 
     class Meta:
         model = Product
