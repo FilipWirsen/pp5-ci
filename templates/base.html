@@ -39,7 +39,7 @@
 <body>
   <header class="container-fluid fixed-top">
     <div id="topnav" class="nav-bg row pt-lg-2">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
                 <h2 class="logo-font text-white my-0"><strong>Disc Golf</strong></h2>
             </a>
@@ -83,7 +83,7 @@
             </li>
             <li class="list-inline-item">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link d-none d-lg-inline-block"
-                    href="#">
+                    href="{% url 'view_cart' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                         <p class="my-0">
