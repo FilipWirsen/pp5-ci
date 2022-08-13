@@ -63,6 +63,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
+    """ Returns details for selected product """
     product = get_object_or_404(Product, pk=product_id)
     context = {
         'product': product,

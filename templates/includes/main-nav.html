@@ -5,12 +5,12 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Putt & Approach</a>
-                <a href="" class="dropdown-item ">Midrange/Multi</a>
-                <a href="" class="dropdown-item ">Fairway Driver</a>
-                <a href="" class="dropdown-item ">Distance Driver</a>
-                <a href="" class="dropdown-item">Accesories</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=putt_approach" class="dropdown-item">Putt & Approach</a>
+                <a href="{% url 'products' %}?category=midrange_multi" class="dropdown-item ">Midrange/Multi</a>
+                <a href="{% url 'products' %}?category=fairway_driver" class="dropdown-item ">Fairway Driver</a>
+                <a href="{% url 'products' %}?category=distance_driver" class="dropdown-item ">Distance Driver</a>
+                <a href="{% url 'products' %}?category=accesories" class="dropdown-item">Accesories</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -21,7 +21,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="on-sale-link">
                 <a href="" class="dropdown-item">Best Discount</a>
                 <a href="" class="dropdown-item">Best Price</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="" class="dropdown-item">All Products on Sale</a>
             </div>
         </li>
         <li class="nav-item">
