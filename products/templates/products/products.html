@@ -12,7 +12,7 @@
             <a href="{% url 'home' %}" class="text-black">
             <i class="fas fa-home"></i> Home </a>
             <span>> Shop</span>
-            <div class="sort-select-wrapper d-flex d-inline-flex w-50">
+            <div class="sort-select-wrapper d-flex d-inline-flex w-25">
                 <select id="sort-selector"
                     class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
