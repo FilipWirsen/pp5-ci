@@ -118,7 +118,7 @@ def edit_product(request, product_id):
     }
     return render(request, 'products/edit_product.html', context)
 
-
+@login_required()
 def delete_product(request, product_id):
     """ Deletes product from the store """
     if not request.user.is_superuser:

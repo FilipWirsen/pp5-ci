@@ -1,0 +1,14 @@
+<form class="form update-form" method="POST" action="">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+            <input class="form-control form-control-sm qty_input" type="number"
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                aria-label="quantity field">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm"><small>Update</small></button>
+    <button type="" class="btn btn-danger btn-sm">
+        <a href="{% url 'remove_from_cart' item.product.id %}" class="remove-item text-white float-right"><small>Remove</small></a>
+        </button>
+</form>

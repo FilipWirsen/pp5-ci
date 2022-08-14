@@ -20,6 +20,10 @@ body, html {
   
 /* Header styling */
 
+.page-header {
+    padding-top: 2vh !important;
+}
+
 
 /* Home page */
 .image-text {

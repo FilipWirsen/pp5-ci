@@ -6,7 +6,7 @@
 {% block content %}
     <div class="container-fluid product-container">
         <div class="row pb-5 pt-2">
-            <div class="col text-center">
+            <div class="col text-center page-header">
                 <h2 class="logo-font">Shopping Cart</h2>
                 <hr class="mb-1 w-50">
             </div>
@@ -18,11 +18,11 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="th-sm"></th>
+                                    <th scope="th-sm">Product Info</th>
+                                    <th scope="th-sm">Price</th>
+                                    <th scope="th-sm">Qty</th>
+                                    <th scope="th-sm">Subtotal</th>
                                 </tr>
                             </thead>
 
@@ -41,7 +41,7 @@
                                         {% include 'cart/product_price.html' %}
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        {% include 'cart/product_quantity_form.html' %}
                                     </td>
                                     <td class="py-3">
                                         {% include 'cart/product_subtotal.html' %}
