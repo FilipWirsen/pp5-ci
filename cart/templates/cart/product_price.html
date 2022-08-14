@@ -1,0 +1,6 @@
+{% if item.product.get_discounted_price %}
+    <p class="my-0 text-danger">${{ item.product.discounted_price|floatformat:2 }}</p>
+    <small class="text-muted"><del>{{ item.product.price|floatformat:2 }}</del></small>
+{% else %}
+    <p class="my-0">${{ item.product.price|floatformat:2 }}</p>
+{% endif %}

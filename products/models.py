@@ -16,6 +16,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     discount_percentage = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    discounted_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
@@ -25,5 +26,7 @@ class Product(models.Model):
 
     @property
     def get_discounted_price(self):
-        self.price = self.price - self.price * self.discount_percentage
-        return self.price
+        if self.discount_percentage:
+            self.discounted_price = self.price - self.price * self.discount_percentage
+            return self.discounted_price
+    

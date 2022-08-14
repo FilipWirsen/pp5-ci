@@ -43,10 +43,6 @@ body, html {
     text-transform: uppercase;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
-
 .shop-now-button {
     background: black;
     color: white;
@@ -109,6 +105,11 @@ body, html {
 
     .product-form {
         margin-top: 220px !important;
+    }
+    .main-logo-link {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
     }
 }
 @media (max-width: 768px) {
