@@ -34,6 +34,11 @@ body, html {
     display: none;
   }
 
+/* Footer */
+
+.footer {
+    background-color: #292b2c;
+}
 
 /* Home page */
 .image-text {

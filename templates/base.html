@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {% block corecss %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/546d7fc263.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="https://kit.fontawesome.com/df7dfe1a2f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
   {% block extra_css %}
@@ -136,6 +136,93 @@
   <button type="button" class="btn btn-danger btn-lg rounded-circle" id="btn-back-to-top" onclick="topFunction()">
     <i class="fas fa-arrow-up"></i>
   </button>
+
+<footer class="text-center text-lg-start footer text-muted">
+    <div class="text-center">
+    <span>Sign up to Our Newsletter:</span>
+    <form method="GET" action="">
+        <div class="input-group w-50 pt-0 pt-sm-5 mx-auto">
+            <input class="form-control  rounded-0" type="text" name="Newsletter" placeholder="Sign up to Our Newsletter">
+            <div class="input-group-append">
+                <button class="form-control btn btn-primary border rounded-0 ml-1" type="submit">
+                    <i class="fas fa-newspaper"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <!-- Section: Links  -->
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mt-5 ">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fa-solid fa-flying-disc me-3"></i><strong>Disc Golf</strong>
+            </h6>
+            <p>
+                We review disc golf courses and sell the latest discs for the best price
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mt-5">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Join us on Social Media
+            </h6>
+            <p>
+                <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f fa-lg"></i></a> 
+            </p>
+            <p>
+                <a href="" class="me-4 text-reset"><i class="fab fa-twitter fa-lg"></i></a> 
+            </p>
+            <p>
+                <a href="" class="me-4 text-reset"><i class="fab fa-instagram fa-lg"></i></a> 
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mt-5">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="{% url 'products' %}" class="text-reset">All Products</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset">Course Reviews</a>
+            </p>
+            <p>
+              <a href="#" class="text-reset">Contact</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mt-5 ">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Stockholm, Sweden, 111 11</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@disc-golf@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    <div class="text-center p-4">
+      © 2021 Copyright: Educational Purposes Only
+    </div>
+  </footer>
 
   {% block postloadjs %}
     <script type="text/javascript">
