@@ -14,15 +14,10 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5 border-bottom" href="#" id="sale-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 border-bottom" href="{% url 'products' %}?discounted_price">
                 Deals
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="deals-link">
-                <a href="{% url 'products' %}?discounted_price" class="dropdown-item">Best Discount</a>
-                <a href="" class="dropdown-item">Best Price</a>
-                <a href="" class="dropdown-item">All Products on Sale</a>
-            </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-white mr-5 border-bottom" href="#">
