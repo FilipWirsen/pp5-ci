@@ -58,7 +58,7 @@
             {% endif %}
             <div class="card-body border">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">{{ product.description |truncatechars:154 }}</p>
                 {% if product.discount_percentage %}
                     <p class="card-text text-danger">{{ product.get_discounted_price| floatformat:2}}$</p>
                 {% else %}

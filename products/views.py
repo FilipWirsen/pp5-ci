@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
+from decimal import Decimal
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -38,6 +39,9 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+        
+        if 'discounted_price' in request.GET:
+            products = Product.objects.exclude(discount_percentage=0)
 
         if 'q' in request.GET:
             query = request.GET['q']

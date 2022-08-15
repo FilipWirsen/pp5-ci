@@ -169,7 +169,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Shipping
 
 FREE_SHIPPING_THRESHHOLD = 50
-STANDARD_SHIPPING_PERCENTAGE = 10
+STANDARD_SHIPPING_PRICE = 5
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
