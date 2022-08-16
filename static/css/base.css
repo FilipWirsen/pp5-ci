@@ -98,6 +98,21 @@ body, html {
     margin-top: 170px !important;
 }
 
+/* Toasts */
+
+.message-container {
+    position: absolute !important;
+    top: 12vh;
+    right: 2vh;
+    z-index: 1031; /* Since the header has fixed-top */
+}
+
+.toast-cart-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */
@@ -139,13 +154,4 @@ body, html {
     .welcome-text {
         display: none;
     }
-}
-
-/* Toasts */
-
-.message-container {
-    position: absolute !important;
-    top: 12vh;
-    right: 2vh;
-    z-index: 1031; /* Since the header has fixed-top */
 }
