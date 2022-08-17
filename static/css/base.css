@@ -133,13 +133,6 @@ body, html {
 /* Home page image text on smaller screens*/
 @media (max-width: 990px) {
 
-    .image-text {
-        margin-top: 30% !important;
-    }
-
-    .product-form {
-        margin-top: 220px !important;
-    }
     .main-logo-link {
         display: flex;
         justify-content: center;
@@ -150,13 +143,22 @@ body, html {
     #main-nav {
         background-color: #292b2c;
     }
-}
-@media (max-width: 768px) {
 
-    .image-text {
-        margin-top: 50% !important;
+    .welcome-text {
+        margin-top: 10vh;
     }
+
+    #newsletter-form {
+        width: 75% !important;
+    }
+}
+
+@media (max-width:450px) {
     .welcome-text {
         display: none;
+    }
+    .image-text {
+        margin-top: 30vh !important;
+        font-size: larger;
     }
 }

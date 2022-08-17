@@ -16,10 +16,11 @@
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <p class="text-muted">Order Summary ({{product_count}})</p>
             <div class="row">
-                <div class="col-7">
+                <div class="col-3"></div>
+                <div class="col-4">
                     <p class="mb-1 mt-0 small">Product</p>
                 </div>
-                <div class="col-3 text-right offset-2">
+                <div class="col-4 text-right">
                     <p class="mb-1 mt-0 small">Subtotal</p>
                 </div>
             </div>
@@ -34,39 +35,40 @@
                         {% endif %}
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     <p class="my-0 text-muted">qty:{{ item.quantity }}</p>
                 </div>
-                <div class="col-3 text-right">
+                <div class="col-4 text-right">
                     {% include 'cart/product_subtotal.html' %}
                 </div>
             </div>
             {% endfor %}
             <hr class="my-0">
             <div class="row text-black text-right">
-                <div class="col-7 offset-2">
+                <div class="col-9">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Shipping:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <p class="my-0">${{ total|floatformat:2}}</p>
                     <p class="my-0">${{ shipping|floatformat:2}}</p>
                     <p class="my-0">${{ grand_total|floatformat:2}}</p>
                 </div>
+            </div>
+            <div class="row text-right">
                 {% if free_shipping_delta > 0 %}
-                <div class="col-12">
+                <div class="col-11">
                     <p class="my-0 text-danger text-right">
-                        You could get free shipping by spending just
-                        <strong>${{ free_shipping_delta|floatformat:2 }}</strong> more
+                        Spend only <strong>${{ free_shipping_delta|floatformat:2 }}</strong> more to get free shipping!
                     </p>
                 </div>
                 {% endif %}
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
+            <p class="text-muted form-info">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">

@@ -58,3 +58,24 @@
     </div>
 </section>
 {% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript">
+    document.addEventListener('scroll', (e) => {
+        let scroll = this.scrollY;
+        hide_header(scroll)
+    })
+    function hide_header(scrollposition) {
+        var header = document.getElementById('header')
+        if (scrollposition < 500) {
+            header.classList.remove('d-none')
+            header.classList.add('d-block')
+        } else {
+            header.classList.remove('d-block')
+            header.classList.add('d-none')
+        }
+
+    }
+
+</script>
+{% endblock %}

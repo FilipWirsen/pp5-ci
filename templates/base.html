@@ -37,7 +37,7 @@
 </head>
 
 <body>
-  <header class="container-fluid fixed-top">
+  <header id="header" class="container-fluid fixed-top">
     <div id="topnav" class="nav-bg row pt-lg-2">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -142,7 +142,7 @@
         <div class="row">
             <div class="col-12">
                 <form method="GET" action="">
-                    <div class="input-group w-50 pt-0 pt-sm-5 mx-auto">
+                    <div class="input-group w-50 pt-5 mx-auto" id="newsletter-form">
                         <input class="form-control  rounded-0" type="text" name="Newsletter" placeholder="Sign up to Our Newsletter">
                         <div class="input-group-append">
                             <button class="form-control btn btn-primary border rounded-0 ml-1" type="submit">
@@ -222,23 +222,6 @@
   {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
-    </script>
-    <script type="text/javascript">
-        var BackToTopBtn = document.getElementById("btn-back-to-top");
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                BackToTopBtn.style.display = "block";
-            } else {
-                BackToTopBtn.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
     </script>
   {% endblock %}
 
