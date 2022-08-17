@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static  'css/style.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container product-container">
+    <div class="row pb-5 pt-2">
+        <div class="col text-center page-header">
+            <h1 class="logo-font">Thank You!</h1>
+            <hr class="mb-1 w-100">
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center py-3">
+        <h2 class="h5 mb-0"><a href="#" class="text-muted"></a> Order #{{ order.order_number }}</h2>
+      </div>
+    <!-- Main content -->
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Details -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tbody>
+                            {% for item in order.lineitems.all %}
+                            <tr>
+                                <td>
+                                    <div class="d-flex mb-2">
+                                        <div class="flex-shrink-0">
+                                            {% if item.product.image %}
+                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="40" class="img-fluid">
+                                            {% else %}
+                                            <img src="{{ MEDIA_URL }}noimageplaceholder.png" alt="{{ item.product.name }}" width="40" class="img-fluid">
+                                            {% endif %}
+                                        </div>
+                                        <div class="flex-lg-grow-1 ml-2">
+                                            <h4 class="small mb-0"><a href="#" class="text-black">{{item.product.name}}</a></h4>
+                                            <span class="small text-muted">Qty: {{item.quantity}}</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                {% if item.product.get_discounted_price %}
+                                <td class="text-end text-danger">${{ item.product.discounted_price|floatformat:2 }}
+                                    <br>
+                                    <small class="text-muted"><del>{{ item.product.price|floatformat:2 }}</del></small>
+                                </td>
+                                {% else %}
+                                <td class="text-end">{{ item.product.price|floatformat:2 }}</td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Subtotal</td>
+                                <td class="text-end">${{order.order_total}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Shipping</td>
+                                <td class="text-end">${% if order.shipping > 0 %}{{order.shipping}}{% else %}0{% endif %}</td>
+                            </tr>
+                            <tr class="fw-bold">
+                                <td colspan="2">Grand Total</td>
+                                <td class="text-end">${{order.grand_total}}</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <a href="{% url 'products' %}?discounted_price" class="btn btn-black rounded-0">
+                        <i class="fas fa fa-chevron-left"></i>
+                        <span>Check out our deals!</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <!-- Shipping information -->
+                <div class="card-body">
+                    <h5 class="pt-2">Shipping Information</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-muted">Name: </p>
+                            <p class="text-muted">Email: </p>
+                            <p class="text-muted">Phone: </p>
+                            <p class="text-muted">Country: </p>
+                            <p class="text-muted">Postcode: </p>
+                            <p class="text-muted">Town or City: </p>
+                            <p class="text-muted">Street Address 1: </p>
+                            <p class="text-muted">Street Address 2: </p>
+                            <p class="text-muted">County:</p>
+                        </div>
+                        <div class="col-6">
+                            <p>{{order.full_name}}</p>
+                            <p>{{order.email}}</p>
+                            <p>{{order.phone_number}}</p>
+                            <p>{{order.country}}</p>
+                            <p>{% if order.postcode %} {{order.postcode}} {% else %} N/A {% endif %}</p>
+                            <p>{{order.town_or_city}}</p>
+                            <p>{{order.street_address1}}</p>
+                            <p>{% if order.street_address2 %} {{order.street_address2}} {% else %} N/A {% endif %}</p>
+                            <p>{% if order.county %} {{order.county}} {% else %} N/A {% endif %}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
