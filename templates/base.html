@@ -28,6 +28,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" 
     integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
     crossorigin="anonymous"></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
 
   {% block extra_js %}
@@ -220,8 +222,26 @@
   </footer>
 
   {% block postloadjs %}
+    {{ block.super }}
     <script type="text/javascript">
         $('.toast').toast('show');
+    </script>
+    <script type="text/javascript">
+        var BackToTopBtn = document.getElementById("btn-back-to-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                BackToTopBtn.style.display = "block";
+            } else {
+                BackToTopBtn.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
   {% endblock %}
 

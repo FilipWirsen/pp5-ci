@@ -60,6 +60,7 @@
 {% endblock %}
 
 {% block extra_js %}
+{{ block.super }}
 <script type="text/javascript">
     document.addEventListener('scroll', (e) => {
         let scroll = this.scrollY;

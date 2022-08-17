@@ -2,6 +2,7 @@
 {% load static %}
 {% load cart_tools %}
 {% block extra_css %}
+<link rel="stylesheet" href="{% static  'checkout/css/checkout.css' %}">
 <link rel="stylesheet" href="{% static  'css/style.css' %}">
 {% endblock %}
 {% block content %}
@@ -23,6 +24,7 @@
                 <div class="col-4 text-right">
                     <p class="mb-1 mt-0 small">Subtotal</p>
                 </div>
+                <hr class="w-100">
             </div>
             {% for item in cart_items %}
             <div class="row mb-2">
@@ -93,8 +95,8 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="text-primary" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="text-primary" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
@@ -123,4 +125,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

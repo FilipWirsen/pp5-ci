@@ -13,5 +13,7 @@ def checkout_view(request):
     order_form = OrderForm()
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51LOdyoAgnFUG4JtXY9Yr5KBQ7aGQF96TAy9UzZkmgymNlwipTWjNoAsyliYrVlWZbT7ymYnQdufmbe4D0HLxMl2i00NZFQWrSf',
+        'client_secret': 'test client secret',
     }
     return render(request, 'checkout/checkout.html', context)

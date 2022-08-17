@@ -10,18 +10,6 @@
     padding-left: 30px;
 }
 
-/* Checkout Page */
-
-.fieldset-label {
-    position: relative;
-    right: .5rem;
-}
-
-.form-info {
-    position: relative;
-    left: 1rem;
-}
-
 @media (max-width: 991px) {
     .product-container {
         margin-top: 20vh !important;
