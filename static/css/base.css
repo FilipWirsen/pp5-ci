@@ -145,6 +145,11 @@ body, html {
         justify-content: center;
         padding-top: 2rem;
     }
+
+
+    #main-nav {
+        background-color: #292b2c;
+    }
 }
 @media (max-width: 768px) {
 
