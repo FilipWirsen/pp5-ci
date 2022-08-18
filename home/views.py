@@ -11,3 +11,10 @@ def home(request):
         'products': products,
     }
     return render(request, 'home/index.html', context)
+
+
+def course_reviews(request):
+    """ View to return course reviews page """
+    
+    template = 'home/course_reviews.html'
+    return render(request, template)

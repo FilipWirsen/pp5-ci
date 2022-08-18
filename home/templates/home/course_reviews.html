@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static  'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid product-container ">
+    <div class="row">
+        <div class="col text-center page-header">
+            <h2 class="logo-font">Course Reviews</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row pt-4">
+        <div class="col-lg-12">
+            Stockholm
+            <hr class="w-100">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-4 py-4">
+            <a href="https://idrottonline.se/JarvaDGC-Frisbee/" target="_blank">
+                <img class="rounded-circle img-fluid" alt="Course image" src="{{ MEDIA_URL }}course_review_img_1.jpg">
+            </a>
+            <h3 class="pt-3">Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis a diam in cursus. Quisque sed
+                dolor sodales, venenatis libero at, interdum diam. Donec dignissim dui sed nulla sagittis commodo.
+                Integer eu gravida magna, nec sodales sapien. Nam scelerisque sapien sit amet convallis imperdiet. Nulla
+                nec urna urna. Donec lacinia risus a ex varius rutrum. Aenean quis massa nunc. Cras ligula libero,
+                posuere in elit aliquet, tempus dictum tortor. In id metus ut massa luctus efficitur a vitae nisl.
+                Vivamus bibendum dictum urna ut porta. Duis at metus sem. Sed vehicula maximus justo, ut sagittis magna.
+                Donec rhoncus nibh non posuere facilisis. Maecenas imperdiet vehicula diam, sed rutrum nisl. </p>
+        </div>
+        <div class="col-lg-4 py-4">
+            <a href="https://idrottonline.se/JarvaDGC-Frisbee/" target="_blank">
+                <img class="rounded-circle img-fluid" alt="Course image" src="{{ MEDIA_URL }}course_review_img_2.jpg">
+            </a>
+            <h3 class="pt-3">Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis a diam in cursus. Quisque sed
+                dolor sodales, venenatis libero at, interdum diam. Donec dignissim dui sed nulla sagittis commodo.
+                Integer eu gravida magna, nec sodales sapien. Nam scelerisque sapien sit amet convallis imperdiet. Nulla
+                nec urna urna. Donec lacinia risus a ex varius rutrum. Aenean quis massa nunc. Cras ligula libero,
+                posuere in elit aliquet, tempus dictum tortor. In id metus ut massa luctus efficitur a vitae nisl.
+                Vivamus bibendum dictum urna ut porta. Duis at metus sem. Sed vehicula maximus justo, ut sagittis magna.
+                Donec rhoncus nibh non posuere facilisis. Maecenas imperdiet vehicula diam, sed rutrum nisl. </p>
+        </div>
+        <div class="col-lg-4 py-4">
+            <a href="https://idrottonline.se/JarvaDGC-Frisbee/" target="_blank">
+                <img class="rounded-circle img-fluid" alt="Course image" src="{{ MEDIA_URL }}course_review_img_3.jpg">
+            </a>
+            <h3 class="pt-3">Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis a diam in cursus. Quisque sed
+                dolor sodales, venenatis libero at, interdum diam. Donec dignissim dui sed nulla sagittis commodo.
+                Integer eu gravida magna, nec sodales sapien. Nam scelerisque sapien sit amet convallis imperdiet. Nulla
+                nec urna urna. Donec lacinia risus a ex varius rutrum. Aenean quis massa nunc. Cras ligula libero,
+                posuere in elit aliquet, tempus dictum tortor. In id metus ut massa luctus efficitur a vitae nisl.
+                Vivamus bibendum dictum urna ut porta. Duis at metus sem. Sed vehicula maximus justo, ut sagittis magna.
+                Donec rhoncus nibh non posuere facilisis. Maecenas imperdiet vehicula diam, sed rutrum nisl. </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
