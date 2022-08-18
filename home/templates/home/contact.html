@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static  'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid product-container ">
+    <div class="row">
+        <div class="col text-center page-header">
+            <h2 class="logo-font">About Us</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row text-center pt-3">
+        <div class="col-lg-12  d-flex justify-content-center">
+            <div class="col-lg-6">
+                <p>We're a community that loves disc golf and everything around it. We sell premium discs and review diffrent courses every month. If you have any questions or need help with your order feel free to contact us.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12 py-3 d-flex justify-content-center">
+            <div class="col-lg-4 py-3">
+                <div class="card bg-info">
+                    <div class="card-body">
+                        <h4>Phone</h4>
+                        <p>+ 01 234 567 89</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12 py-3 d-flex justify-content-center">
+            <div class="col-lg-4 py-3">
+                <div class="card bg-info">
+                    <div class="card-body">
+                        <h4>Email</h4>
+                        <p>info@disc-golf@gmail.com </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12 py-3 d-flex justify-content-center">
+            <div class="col-lg-4 py-3">
+                <div class="card bg-info">
+                    <div class="card-body">
+                        <h4>Address</h4>
+                        <p>Stockholm</p>
+                        <p>skurtroad 4, 111 11</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

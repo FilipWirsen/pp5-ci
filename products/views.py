@@ -130,12 +130,3 @@ def delete_product(request, product_id):
     messages.success(request, f'Product {product.name} was deleted')
     return redirect(reverse('products'))
 
-def deals_view(request):
-    """ View that returns products on campaing """
-    products = Product.objects.exclude(discount_percentage=0)
-
-    context = {
-        'products': products,
-    }
-
-    return render(request, 'products/deals.html', context)
