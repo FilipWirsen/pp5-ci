@@ -20,9 +20,11 @@ body, html {
   }
   
 /* Header styling */
-
-.page-header {
-    padding-top: 2vh !important;
+.nav-bg {
+    background-color: #292b2c;
+}
+.home-link {
+    padding-left: 30px;
 }
 
 /* Back to top button */
@@ -128,6 +130,10 @@ body, html {
     .header-container {
         padding-top: 164px;
     }
+
+    .product-container {
+        margin-top: 20vh !important;
+    }
 }
 
 /* Home page image text on smaller screens*/
@@ -159,6 +165,7 @@ body, html {
     #page-header {
         margin-top: 25vh !important;
     }
+
 }
 
 @media (max-width:450px) {

@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static  'css/style.css' %}">
-{% endblock %}
- 
 {% block content %}
  {% if user.is_superuser %}
     <div class="col product-form">
