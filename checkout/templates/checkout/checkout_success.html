@@ -110,10 +110,17 @@
     </div>
       <div class="row">
         <div class="col-12">
-            <a href="{% url 'deals' %}" class="btn btn-black rounded-0">
-                <i class="fas fa fa-chevron-left"></i>
-                <span>Check out our deals!</span>
-            </a>
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0">
+                    <span>Back to Profile</span>
+                    <i class="fas fa-user"></i>
+                </a>
+            {% else %}
+                <a href="{% url 'deals' %}" class="btn btn-black rounded-0">
+                    <i class="fas fa fa-chevron-left"></i>
+                    <span>Check out our deals!</span>
+                </a>
+            {% endif %}
         </div>
     </div>
 </div>

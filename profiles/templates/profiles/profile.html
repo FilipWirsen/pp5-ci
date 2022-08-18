@@ -24,8 +24,42 @@
             </form>
         </div>
         <div class="col-lg-5">
-            <p class="mt-2">Default Shipping Information</p>
-            {{ orders }}
+            <p class="mt-2">Order History</p>
+            <div class="order-history table-responsive">
+                <table class="table table-small table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Number</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Products</th>
+                            <th scope="col">Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr scope="row">
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}" 
+                                title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:6 }}
+                                </a>
+                            </td>
+                            <td>{{ order.date|date:"M d, Y" }}</td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for product in order.lineitems.all %}
+                                        <li class="small">
+                                            {{ product.product.name }} x {{ product.quantity }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>${{ order.grand_total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

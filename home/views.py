@@ -21,7 +21,7 @@ def course_reviews(request):
 
 
 def deals_view(request):
-    """ View that returns products on campaing """
+    """ View that return products on campaing """
     products = Product.objects.exclude(discount_percentage=0)
     context = {
         'products': products,
