@@ -161,4 +161,8 @@ body, html {
         margin-top: 30vh !important;
         font-size: larger;
     }
+
+    .page-header {
+        margin-top: 10vh;
+    }
 }

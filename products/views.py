@@ -39,9 +39,6 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-        
-        if 'discounted_price' in request.GET:
-            products = Product.objects.exclude(discount_percentage=0)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -132,3 +129,13 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'Product {product.name} was deleted')
     return redirect(reverse('products'))
+
+def deals_view(request):
+    """ View that returns products on campaing """
+    products = Product.objects.exclude(discount_percentage=0)
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/deals.html', context)
