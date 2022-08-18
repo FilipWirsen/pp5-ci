@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static  'profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 {% block content %}
 <div class="container product-container">
@@ -11,6 +11,40 @@
             <hr class="mb-1 w-100">
         </div>
     </div>
-    <div class="row"></div>
+    <div class="row">
+        <div class="col-lg-7">
+            <p class="mt-2">Default Shipping Information</p>
+            <form action="{% url 'profile' %}" class="mt-3" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button id="submit-button" class="btn btn-primary rounded-0">
+                    <span class="font-weight-bold">Save Information</span>
+                    <i class="fas fa-lock"></i>
+                </button>
+            </form>
+        </div>
+        <div class="col-lg-5">
+            <p class="mt-2">Default Shipping Information</p>
+            {{ orders }}
+        </div>
+    </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        let countrySelected = $('#id_default_country').val();
+        if (!countrySelected) {
+            $('#id_default_country').css('color', '#aab7c4');
+        }
+        $('#id_default_country').change(function() {
+            countrySelected = $(this).val();
+            if (!countrySelected) {
+                $(this).css('color', '#aab7c4');
+            } else {
+                $(this).css('color', '#000');
+            }
+        });
+    </script>
 {% endblock %}
