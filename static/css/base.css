@@ -131,7 +131,7 @@ body, html {
 }
 
 /* Home page image text on smaller screens*/
-@media (max-width: 990px) {
+@media (max-width: 991px) {
 
     .main-logo-link {
         display: flex;
@@ -151,6 +151,14 @@ body, html {
     #newsletter-form {
         width: 75% !important;
     }
+
+    #breadcrumb {
+        display: none !important;
+    }
+
+    #page-header {
+        margin-top: 25vh !important;
+    }
 }
 
 @media (max-width:450px) {
@@ -160,9 +168,5 @@ body, html {
     .image-text {
         margin-top: 30vh !important;
         font-size: larger;
-    }
-
-    .page-header {
-        margin-top: 10vh;
     }
 }

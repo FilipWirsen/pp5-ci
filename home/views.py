@@ -23,12 +23,12 @@ def course_reviews(request):
 def deals_view(request):
     """ View that returns products on campaing """
     products = Product.objects.exclude(discount_percentage=0)
-
     context = {
         'products': products,
     }
 
     return render(request, 'home/deals.html', context)
+
 
 def contact_view(request):
     """ View to return contact page """

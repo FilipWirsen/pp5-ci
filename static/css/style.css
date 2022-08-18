@@ -55,7 +55,7 @@
 
 @media (max-width: 991px) {
     .product-container {
-        margin-top: 20vh !important;
+        margin-top: 2vh !important;
     }
     .sort-select-wrapper {
         width: 100% !important;
@@ -64,7 +64,7 @@
     .product-details-box {
         margin-bottom: 30vh;
     }
-
+    
 }
 
 

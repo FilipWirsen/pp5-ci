@@ -65,9 +65,17 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ Returns details for selected product """
+    current_url = request.META.get('HTTP_REFERER')
     product = get_object_or_404(Product, pk=product_id)
+    comming_from = ''
+    if 'deals' in current_url:
+        comming_from = 'deals'
+    elif 'products' in current_url:
+        comming_from = 'products'
+
     context = {
         'product': product,
+        'comming_from': comming_from
     }
     return render(request, 'products/product_detail.html', context)
 
