@@ -8,6 +8,11 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Current Rating: {{ product.rating }}</p>
+        </div>
+    </div>
     <div class="row d-flex justify-content-center">
         <div class="col-8">
             <form action="{% url 'product_review' product.id %}" method="POST" class="form" enctype="multipart/form-data">

@@ -7,6 +7,7 @@ from decimal import Decimal
 
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
+from profiles.models import UserProfile
 
 # Create your views here.
 
@@ -140,25 +141,43 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
+def calc_rating(product):
+    num_of_reviews = Review.objects.filter(product=product)
+    total_score = 0
+    for review in num_of_reviews:
+        total_score += review.user_rating
+    final_rating = total_score / num_of_reviews.count()
+    return final_rating
+
+
 def product_review(request, product_id):
     """ Returns review form to leave reviews """
     product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(UserProfile, user=request.user)
+    #if Review.objects.filter(user=user, product=product).exists():
+    #        messages.info(request, "You've already rated this product.")
+    #        return redirect(reverse('profile'))
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         user_rating = request.POST['user_rating']
-        print(float(user_rating))
         if form.is_valid():
-            product.rating = float(user_rating)
+            Review.objects.create(
+                user=user,
+                product=product,
+                user_rating=user_rating,
+            )
+            product.rating = calc_rating(product)
             product.save()
             messages.success(request, f'Successfully rated {product.name} {user_rating}/5')
+            return redirect(reverse('product_detail', args=[product.id]))
+
         else:
             messages.error(request, 'Failed to review product. Please ensure the form is valid.')
-    else:
-        form = ReviewForm()
-    
+    form = ReviewForm()            
     context = {
         'form': form,
         'product': product,
     }
     
     return render(request, 'products/product_review.html', context)
+
