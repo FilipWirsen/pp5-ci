@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid product-container ">
+    <div id="page-header" class="row">
+        <div class="col text-center">
+            <h2 class="logo-font">Course Reviews</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row text-center">
+        {% for review in reviews %}
+        <div class="col-lg-4 py-4">
+            {% if review.image %}
+            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" target="_blank">
+                <img class="rounded-circle img-fluid" alt="Course image" src="{{ review.image.url }}">
+            </a>
+            {% else %}
+            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" target="_blank">
+                <img class="rounded-circle img-fluid" alt="Course image" src="{{ MEDIA_URL }}noimageplaceholder.png">
+            </a>
+            {% endif %}
+            <h3 class="pt-3">{{review.name}}</h3>
+            <p>{{ review.text }}</p>
+            <p>{{ review.address }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

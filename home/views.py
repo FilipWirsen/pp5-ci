@@ -13,13 +13,6 @@ def home(request):
     return render(request, 'home/index.html', context)
 
 
-def course_reviews(request):
-    """ View to return course reviews page """
-    
-    template = 'home/course_reviews.html'
-    return render(request, template)
-
-
 def deals_view(request):
     """ View that return products on campaing """
     products = Product.objects.exclude(discount_percentage=0)
