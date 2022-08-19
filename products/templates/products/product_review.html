@@ -3,14 +3,37 @@
 {% block content %}
 <div class="col product-form">
     <div class="row">
-        <div class="col text-center page-header">
+        <div class="col text-center page-header pt-3">
             <h2 class="logo-font">Rate Product</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <p>Current Rating: {{ product.rating }}</p>
+    <div class="container px-4 px-lg-5 my-5">
+        <p>Product Review</p>
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            {% if product.image %}
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}"
+                    alt="{{ product.name }}" /></div>
+            {% else %}
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimageplaceholder.png"
+                    alt="{{ product.name }}" /></div>
+            {% endif %}
+            <div class="col-md-6">
+                <div class="small mb-1"><strong>Sku:</strong> {{ product.sku }}</div>
+                <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
+                <div class="fs-5 mb-2">
+                    <p><strong>Rating:</strong> {{product.rating}} / 5 <i class="fas fa-star"></i></p>
+                    {% if product.discount_percentage %}
+                    <span class="text-decoration-line-through text-danger"><strong class="text-black">Discounted
+                            Price:</strong> {{ product.get_discounted_price|floatformat:2 }}$</span>
+                            <small class="text-muted"><del>{{product.price|floatformat:2 }}</del></small>
+                    {% else %}
+                    <span class="text-decoration-line-through"><strong>Price:</strong>{{product.price}}$</span>
+                    {% endif %}
+                </div>
+                <p class="lead"><strong>Product Description:</strong></p>
+                <p>{{product.description}}</p>
+            </div>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
