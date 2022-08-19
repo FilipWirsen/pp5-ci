@@ -3,10 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
+from decimal import Decimal
 
-
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -84,7 +84,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add products to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only admins are allowed there...')
+        messages.warning(request, 'Only admins are allowed there...')
         return redirect(reverse('home'))
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -107,7 +107,7 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Form to edit products """
     if not request.user.is_superuser:
-        messages.error(request, 'Only admins are allowed there...')
+        messages.warning(request, 'Only admins are allowed there...')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -132,9 +132,33 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Deletes product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only admins can do that...')
+        messages.warning(request, 'Only admins can do that...')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f'Product {product.name} was deleted')
     return redirect(reverse('products'))
+
+
+def product_review(request, product_id):
+    """ Returns review form to leave reviews """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        user_rating = request.POST['user_rating']
+        print(float(user_rating))
+        if form.is_valid():
+            product.rating = float(user_rating)
+            product.save()
+            messages.success(request, f'Successfully rated {product.name} {user_rating}/5')
+        else:
+            messages.error(request, 'Failed to review product. Please ensure the form is valid.')
+    else:
+        form = ReviewForm()
+    
+    context = {
+        'form': form,
+        'product': product,
+    }
+    
+    return render(request, 'products/product_review.html', context)

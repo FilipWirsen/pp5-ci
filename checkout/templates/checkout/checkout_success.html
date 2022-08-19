@@ -69,7 +69,16 @@
             <div class="card mb-4">
                 <div class="card-body">
                 <h3 class="h6">Thank you for your order!</h3>
-                <p>Thank you for completing your order! All information will be sent to {{order.email}}. If you have any questions feel free to contact us here <a href="#">Contact</a></p>
+                <p>Thank you for completing your order! All information will be sent to {{order.email}}.
+                    Once you've received your products you can leave a review them here
+                    <ul>
+                        {% for item in order.lineitems.all %}
+                            <li>
+                                <a href="{% url 'product_review' item.product.id %}" class="text-info" >{{ item.product.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </p>
                 </div>
             </div>
 

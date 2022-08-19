@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="col product-form">
+    <div class="row">
+        <div class="col text-center page-header">
+            <h2 class="logo-font">Rate Product</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <form action="{% url 'product_review' product.id %}" method="POST" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary rounded-0">Rate Products</button>
+                <button class="btn rounded-0 border"><a class="text-black" href="{% url 'home' %}">Cancel</a></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

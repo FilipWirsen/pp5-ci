@@ -1,4 +1,5 @@
 from django.db import models
+from profiles.models import UserProfile
 
 
 class Category(models.Model):
@@ -34,3 +35,9 @@ class Product(models.Model):
             self.discounted_price = self.price - self.price * self.discount_percentage
             return self.discounted_price
     
+
+class Review(models.Model):
+    """ Model for raiting products """
+    user = models.ForeignKey(UserProfile, related_name='review', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='review', on_delete=models.CASCADE)
+    user_rating = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)

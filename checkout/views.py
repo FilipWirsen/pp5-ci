@@ -154,3 +154,4 @@ def checkout_success(request, order_number):
         'order': order,
     }
     return render(request,'checkout/checkout_success.html', context)
+
