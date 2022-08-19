@@ -1,0 +1,1 @@
+web: gunicorn disc_golf.wsgi:application
