@@ -9,15 +9,32 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="col-8">
-            <form action="{% url 'add_product' %}" method="POST" class="form" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-black rounded-0">Create Product</button>
-                <button class="btn rounded-0"><a href="{% url 'products' %}">Back to Products</a></button>
-            </form>
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <form action="{% url 'add_product' %}" method="POST" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field|as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary rounded-0">Add Product</button>
+                    <button class="btn rounded-0 border"><a class="text-black" href="{% url 'home' %}">Cancel</a></button>
+                </form>
+            </div>
         </div>
     </div>
  {% endif %}
 
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to ${file.name}`);
+        })
+    </script>
 {% endblock %}

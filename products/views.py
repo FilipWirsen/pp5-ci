@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
-from decimal import Decimal
+
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -84,7 +84,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add products to the store """
     if not request.user.is_superuser:
-        messages.warning(request, 'Only admins are allowed there...')
+        messages.error(request, 'Only admins are allowed there...')
         return redirect(reverse('home'))
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -107,7 +107,7 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Form to edit products """
     if not request.user.is_superuser:
-        messages.warning(request, 'Only admins are allowed there...')
+        messages.error(request, 'Only admins are allowed there...')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -127,14 +127,14 @@ def edit_product(request, product_id):
     }
     return render(request, 'products/edit_product.html', context)
 
+
 @login_required()
 def delete_product(request, product_id):
     """ Deletes product from the store """
     if not request.user.is_superuser:
-        messages.warning(request, 'Only admins can do that...')
+        messages.error(request, 'Only admins can do that...')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f'Product {product.name} was deleted')
     return redirect(reverse('products'))
-
