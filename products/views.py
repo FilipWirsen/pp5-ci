@@ -155,7 +155,7 @@ def product_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
     if Review.objects.filter(user=user, product=product).exists():
-        messages.info(request, "You've already rated this product.")
+        messages.info(request, "You've already revied this product.")
         return redirect(reverse('profile'))
     if request.method == 'POST':
         form = ReviewForm(request.POST)

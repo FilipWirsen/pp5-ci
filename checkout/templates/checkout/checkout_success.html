@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 <div class="container product-container">
-    <div class="row" id="page-header">
-        <div class="col text-center">
+    <div class="row">
+        <div class="col page-header text-center pt-5">
             <h1 class="logo-font">Thank You!</h1>
             <hr class="mb-1 w-100">
         </div>
@@ -70,7 +70,7 @@
                 <div class="card-body">
                 <h3 class="h6">Thank you for your order!</h3>
                 <p>Thank you for completing your order! All information will be sent to {{order.email}}.
-                    Once you've received your products you can leave a review them here
+                    Once you've received your products you can rate the product for other customers to see here
                     <ul>
                         {% for item in order.lineitems.all %}
                             <li>
