@@ -227,7 +227,7 @@ body, html {
     }
 
     .product-form-header {
-        padding-top: 10rem;
+        margin-top: 10rem !important;
     }
 }
 
