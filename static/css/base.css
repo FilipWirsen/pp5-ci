@@ -266,6 +266,11 @@ body, html {
         padding-top: 10rem !important;
     }
 
+    #product-detail-img,
+    .card-img-top {
+        height: 30vw !important;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -275,5 +280,10 @@ body, html {
     .image-text {
         margin-top: 30vh !important;
         font-size: larger;
+    }
+
+    #product-detail-img,
+    .card-img-top {
+        height: 80vw !important;
     }
 }

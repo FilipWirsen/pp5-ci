@@ -29,7 +29,7 @@
                 <div class="col-md-6"><img id="product-detail-img" class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}"
                         alt="{{ product.name }}" /></div>
                 {% else %}
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimageplaceholder.png"
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" id="product-detail-img" src="{{ MEDIA_URL }}noimageplaceholder.png"
                         alt="{{ product.name }}" /></div>
                 {% endif %}
                 <div class="col-md-6">
