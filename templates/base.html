@@ -212,7 +212,7 @@
                 </h6>
                 <p>
                     <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f fa-lg"></i>
-                        @ Lorem Ipsum
+                        @ Lorem Ipsum
                     </a>
                 </p>
                 <p>
@@ -234,10 +234,10 @@
                     <a href="{% url 'products' %}" class="text-reset">All Products</a>
                 </p>
                 <p>
-                    <a href="#" class="text-reset">Course Reviews</a>
+                    <a href="{% url 'course_reviews' %}" class="text-reset">Course Reviews</a>
                 </p>
                 <p>
-                    <a href="#" class="text-reset">Contact</a>
+                    <a href="{% url 'contact' %}" class="text-reset">Contact</a>
                 </p>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mt-5 ">
@@ -265,6 +265,8 @@
         var BackToTopBtn = document.getElementById("btn-back-to-top");
         window.onscroll = function () {
             scrollFunction()
+            let scroll = this.scrollY;
+            hide_header(scroll)
         };
 
         function scrollFunction() {
@@ -279,6 +281,22 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        function hide_header(scrollposition) {
+        var MaxWidth= window.matchMedia("(max-width: 750px)")
+        if (MaxWidth.matches) {
+            var header = document.getElementById('header')
+            if (scrollposition < 500) {
+                header.classList.remove('d-none')
+                header.classList.add('d-block')
+            } else {
+                header.classList.remove('d-block')
+                header.classList.add('d-none')
+            }
+        }   
+
+    }
+
     </script>
     {% endblock %}
 

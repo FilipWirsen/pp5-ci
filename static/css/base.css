@@ -23,6 +23,7 @@ body, html {
 .nav-bg {
     background-color: #292b2c;
 }
+
 .home-link {
     padding-left: 30px;
 }
@@ -42,7 +43,6 @@ body, html {
     background-color: #292b2c;
 }
 
-/* Home page */
 .image-text {
     margin-top: 15% !important;
 }
@@ -50,6 +50,10 @@ body, html {
 .shop-now-btn:hover {
     background: #424242 ;
     border-color: #424242;
+}
+
+#select-container {
+    padding-left: 30px;
 }
 
 .icon {
