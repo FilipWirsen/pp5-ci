@@ -5,7 +5,7 @@ from .models import CourseReview
 def course_reviews(request):
     """ View to return course reviews page """
     reviews = CourseReview.objects.all()
-    
+
     template = 'course_reviews/course_reviews.html'
 
     context = {

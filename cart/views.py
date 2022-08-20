@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 
 from products.models import Product
@@ -19,11 +19,15 @@ def add_to_cart(request, product_id):
 
     if product_id in list(cart.keys()):
         cart[product_id] += quantity
-        messages.success(request, f'Updated quantity of {product.name} to {cart[product_id]}')
+        messages.success(
+            request,
+            f'Updated quantity of {product.name} to {cart[product_id]}')
     else:
         cart[product_id] = quantity
-        messages.success(request, f'Succesfully added {cart[product_id]} of {product.name} to cart')
-    
+        messages.success(
+            request,
+            f'Succesfully added {cart[product_id]} of {product.name} to cart')
+
     request.session['cart'] = cart
     return redirect(redirect_url)
 
@@ -39,7 +43,7 @@ def update_cart(request, product_id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-    
+
 
 def remove_from_cart(request, product_id):
     """Remove product from the shopping cart"""
@@ -50,4 +54,3 @@ def remove_from_cart(request, product_id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-

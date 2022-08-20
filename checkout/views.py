@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -16,7 +17,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
-    """  """
+    """ View to cache checkout data """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -68,21 +69,24 @@ def checkout_view(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        'One of the products in your cart cant be found in our database.'
-                        'Please contact us for assistance')
-                    )
+                    messages.error(request,
+                                   ('One of the products in your cart cant be \
+                                    found in our database. \
+                                    Please contact us for assistance'))
                     order.delete()
                     return redirect(reverse('view_cart'))
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
-        else: 
+            return redirect(
+                    reverse('checkout_success', args=[order.order_number]))
+        else:
             messages.error(request, 'There was an error with your form. \
-                                    Please double check your information.')          
+                                    Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart. Add products before trying to checkout.")
+            messages.error(request,
+                           "There's nothing in your cart. \
+                            Add products before trying to checkout.")
             return redirect(reverse('products'))
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
@@ -145,7 +149,7 @@ def checkout_success(request, order_number):
 
     messages.success(request, f'Order successfully placed! \
         Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')  
+        email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
@@ -153,5 +157,4 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-    return render(request,'checkout/checkout_success.html', context)
-
+    return render(request, 'checkout/checkout_success.html', context)

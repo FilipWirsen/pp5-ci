@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404
 from django.conf import settings
-from decimal import Decimal
 
 from products.models import Product
 
@@ -24,7 +23,7 @@ def cart_contents(request):
             'quantity': quantity,
             'product': product
         })
-            
+
     if total < settings.FREE_SHIPPING_THRESHOLD:
         shipping = settings.STANDARD_SHIPPING_PRICE
         free_shipping_delta = settings.FREE_SHIPPING_THRESHOLD - total

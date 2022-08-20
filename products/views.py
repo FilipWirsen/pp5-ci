@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.db.models import Q
-from decimal import Decimal
 
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
@@ -91,10 +90,13 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         product = form.save()
         if form.is_valid():
-            messages.success(request, f'Successfully created product, {product.name}')
+            messages.success(request,
+                             f'Successfully created product, {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add product. \
+                            Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -118,10 +120,13 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully updated {product.name}.')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. \
+                            Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are currently editing product: {product.name}')
+        messages.info(request,
+                      f'You are currently editing product: {product.name}')
     context = {
         'form': form,
         'product': product
@@ -168,16 +173,18 @@ def product_review(request, product_id):
             )
             product.rating = calc_rating(product)
             product.save()
-            messages.success(request, f'Successfully rated {product.name} {user_rating}/5')
+            messages.success(request,
+                             f'Successfully rated {product.name} \
+                             {user_rating}/5')
             return redirect(reverse('product_detail', args=[product.id]))
 
         else:
-            messages.error(request, 'Failed to review product. Please ensure the form is valid.')
-    form = ReviewForm()            
+            messages.error(request, 'Failed to review product. \
+                                     Please ensure the form is valid.')
+    form = ReviewForm()
     context = {
         'form': form,
         'product': product,
     }
-    
-    return render(request, 'products/product_review.html', context)
 
+    return render(request, 'products/product_review.html', context)
