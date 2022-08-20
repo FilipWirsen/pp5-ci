@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/cart/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/?category=putt_approach</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/?category=midrange_multi</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/?category=fairway_driver</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/?category=distance_driver</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/?category=bundels_accesories</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/products/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/deals/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/course_reviews/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/contact/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ci-pp5-e-commerce.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-08-20T17:15:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
