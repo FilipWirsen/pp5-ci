@@ -263,7 +263,7 @@ body, html {
 
     .allauth-forms,
     #products-detail-container {
-        padding-top: 10rem !important;
+        margin-top: 10rem !important;
     }
 
     #product-detail-img,
