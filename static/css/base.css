@@ -93,6 +93,16 @@ body, html {
     margin-top: 170px !important;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+#product-detail-img {
+    height: 30vw;
+}
+
 /* Toasts */
 
 .message-container {

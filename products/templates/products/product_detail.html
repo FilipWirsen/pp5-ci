@@ -26,7 +26,7 @@
         <div class="container px-4 px-lg-5 my-5" id="products-detail-container">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 {% if product.image %}
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}"
+                <div class="col-md-6"><img id="product-detail-img" class="card-img-top mb-5 mb-md-0" src="{{ product.image.url }}"
                         alt="{{ product.name }}" /></div>
                 {% else %}
                 <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ MEDIA_URL }}noimageplaceholder.png"
