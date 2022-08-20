@@ -6,7 +6,7 @@ from products.models import Product
 
 def home(request):
     """ View to return home page """
-    products = Product.objects.order_by('-rating')
+    products = Product.objects.order_by('-rating')[:8]
     context = {
         'products': products,
     }
