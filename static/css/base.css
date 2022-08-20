@@ -254,8 +254,8 @@ body, html {
         display: none !important;
     }
 
-    #page-header {
-        margin-top: 25vh !important;
+    .page-header {
+        margin-top: 10rem !important;
     }
 
 }
