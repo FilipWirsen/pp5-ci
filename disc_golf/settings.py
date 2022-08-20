@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'course_reviews',
     # Other
     'crispy_forms',
-    'storages', 
+    'storages',
 ]
 
 
