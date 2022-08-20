@@ -287,3 +287,11 @@ body, html {
         height: 80vw !important;
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width:450px) {
+        #topnav {
+            display: none;
+        }
+    }
+  }
