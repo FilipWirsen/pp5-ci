@@ -88,5 +88,13 @@
             </div>
         </div>
     </section>
+        <div class="row gx-4 gx-lg-5 text-center">
+            {% for review in reviews %}
+            <div class="col-lg-12 border mb-3">
+                <p>Rating: {{ review.user_rating }} / 5</p>
+                <p>Message: {{ review.review_message }}</p>
+            </div>
+            {% endfor %}
+        </div>
 </div>
 {% endblock %}

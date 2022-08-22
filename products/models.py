@@ -47,3 +47,5 @@ class Review(models.Model):
                                 on_delete=models.CASCADE)
     user_rating = models.DecimalField(max_digits=6, decimal_places=2,
                                       null=False, blank=False)
+    review_message = models.CharField(max_length=254, null=True, blank=True)
+                                      

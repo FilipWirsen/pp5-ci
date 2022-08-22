@@ -26,13 +26,13 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('user_rating',)
+        fields = ('user_rating', 'review_message',)
 
     def __init__(self, *args, **kwargs):
         """ Remove auto-generated label and add placeholder and classes """
         super().__init__(*args, **kwargs)
-        self.fields['user_rating'].widget.attrs['autofocus'] = True
         self.fields['user_rating'].widget.attrs = {'min': 0, 'max': 5}
         self.fields['user_rating'].label = 'Rate This Product'
+        self.fields['review_message'].label = 'Let us know what you thought of the product (optional)'
         self.fields['user_rating'].widget.attrs['class'] = 'rounded-0 border-black'
         self.fields['user_rating'].widget.attrs['placeholder'] = '0-5'

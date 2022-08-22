@@ -65,6 +65,7 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ Returns details for selected product """
+    reviews = Review.objects.filter(product=product_id)
     current_url = request.META.get('HTTP_REFERER')
     product = get_object_or_404(Product, pk=product_id)
     comming_from = ''
@@ -75,7 +76,8 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'comming_from': comming_from
+        'comming_from': comming_from,
+        'reviews': reviews
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -165,11 +167,14 @@ def product_review(request, product_id):
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         user_rating = request.POST['user_rating']
+        review_message = request.POST['review_message']
         if form.is_valid():
             Review.objects.create(
                 user=user,
                 product=product,
                 user_rating=user_rating,
+                review_message=review_message,
+
             )
             product.rating = calc_rating(product)
             product.save()
