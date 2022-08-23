@@ -193,3 +193,13 @@ def product_review(request, product_id):
     }
 
     return render(request, 'products/product_review.html', context)
+
+
+def deals_view(request):
+    """ View that return products on campaing """
+    products = Product.objects.exclude(discount_percentage=0)
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/deals.html', context)

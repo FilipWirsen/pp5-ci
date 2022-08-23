@@ -27,13 +27,13 @@ I created this website for a friends business that sells golf discs.
 * Has social media links to Facebook, Instagram etc.
 * User accounts to easily keep track of previous orders.
 * Let users that bought a product rate it.
+* Look at customer reviews on products.
 
 And the most important functionality for the site owner is the following:
 
 * Ability to add, update and delete products. 
 * Ability to add discounts to products.
 * Allow users to contact the store owner incase they have any questions or if something is not working as expected.
-* Look at customer reviews on products.
 
 # User Stories
 
@@ -204,35 +204,49 @@ The products are displayed side by side with an image, name, description, price 
 ### Product Detail Page
 <img src="readme_assets/product-detail.png">
 The Products Detail page contains a link at the top witch lets the user know what product they are viewing and lets them go back to either the product page or the home page. 
-The page is divided into two sides. The left side contains the product image and the right side contains the products sku, name, rating, price and description. Beneth this the user can select a quantity they wish to add to their bag and then by clickling the "Add to Cart" 
+The page is divided into two sides. The left side contains the product image and the right side contains the products sku, name, rating, price and description. Beneth this the user can select a quantity they wish to add to their bag and then by clickling the "Add to Bag" button the selected quantity is added to their cart. Under the "Add to Bag" button other customers reviews are shown.
 
 ### Toasts
-
 <img src="readme_assets/toast.png">
+To make the user aware of what their doing most of the functions a user can do shows a toast containing relevant information about what they just did. Ex. Added product to your cart or updated quantity to...
 
 ### Checkout Page
-
 <img src="readme_assets/checkout.png">
+The checkout Page contains of a form on the left side where the user can enter their personal details and their shipping details before adding their card details and completing the order. On the right side there's a order summary witch shows all products the user is about to order and the grand total.
+
+#### Testing
+ * When Testing the checkout page use card number, 4242 4242 4242 4242
+ * Use a valid future date
+ * Use any three-digit CVC
 
 ### Order Details Page
-
 <img src="readme_assets/order-details.png">
+The Order Details page displays the order number, order information and shipping information. The page also contains links to rate each product they bought.
 
 ### Product Review Page
-
 <img src="readme_assets/product-review.png">
+The Product Review page lets the user rate each product they bought from zero to five witch will then update the products rating. The user can also leave a message witch for now only the store owners can see.
 
 ### Edit Product Page
-
 <img src="readme_assets/edit-product.png">
+The Edit Product page contains of a form where the store owners can edit a page. ex. Add a discount to it.
 
 ### Add Product Page
-
 <img src="readme_assets/add-product.png">
+The Add Product page looks the same as the edit product page except the form is empty and the store owner can add information about the new product their about to add
 
-### See Reviews
 
-<img src="readme_assets/admin-reviews.png">
+### Error Pages
+
+# Technologies Used
+
+# Testing
+
+# Deployment 
+
+# Credits
+
+# Acknowledgements
 
 
 # Wireframes
