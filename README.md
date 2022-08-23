@@ -6,7 +6,7 @@
 [Pro Disc](https://ci-pp5-e-commerce.herokuapp.com/)
 
 # About
-This is a full-stack e-commerce project I build using Python, JavaScript, HTML and CSS.
+This is a full-stack e-commerce project Ibuild using Python, JavaScript, HTML and CSS.
 I created this website for a friends business that sells golf discs.
 
 # Strategy
@@ -16,11 +16,10 @@ I created this website for a friends business that sells golf discs.
  * Those who often play disc golf.
  * All ages, mostly men between 20-40.
 
- Thinking aout the main audience i think the most important things for this website to contain is the following:
+ Thinking aout the main audience Ithink the most important things for this website to contain is the following:
 
 * Easy to navigate and to sort for the type of disc your interested in buying.
 * Has alot of trustability to make the user feel like they are buying from proffesionals that know what their talking about.
-* Has social media links to Facebook, Instagram etc.
 * User accounts to easily keep track of previous orders.
 * Let users that bought a product rate it.
 * Look at customer reviews on products.
@@ -36,31 +35,31 @@ And the most important functionality for the site owner is the following:
 ## User
 
 1. As a shopper I want to be able to view all products so that I can browse the websites products.
-2. As a shopper I want to be able to Sort products based on type of product so that I can find products based on what I want.
-3. As a shopper I want to be able to sort products based on category so that i can find the best rated/priced products.
-4. As a shopper I want to be able to add products to a cart so that i can save products im interested in.
-5. As a shopper I want to be able to select a quantity of the product to add to the cart so that i can add more than one of the same product to my cart
-6. As a shopper I want to be able to view the price of my entire cart so that i can be aware of how much it costs.
-7. As a shopper I want to be able to update the quantity of a product in my cart so that i can easily make changes in my cart.
-8. As a shopper I want to be able to delete products from my cart so that i can remove products i dont want to buy.
-9. As a shopper I want to be able to easily checkout and enter my shipping details so that i can feel comftrable and safe when placing my order
-10. As a shopper I want to be able to make a purchase using my debit/credit card so that i can pay for my order right away.
-11. As a shopper I want to be able to recive a confirmation email so that i can feel safe that the order went through and keep record of my orders.
-12. As a shopper i want to be able to view an order confirmation so that i can verify that my order details are correct.
-13. As a shopper I want to be able to easily contact the store so that i can ask them questions and get assistans if needed.
-14. As a shopper I want to be able to read course reviews so that i can find new good courses to try out.
-15. As a shopper I want to be able to sign up to a newsletter so that i can be the first one to hear about new arrivals and deals.
-16. As a shopper I want to be able to register for an account so that i can see my previous orders and save my shipping details.
-17. As a shopper I want to be able to login/logout so that i can Access my profile.
-18. As a shopper I want to be able to recover my password if i forgot it so that i can recover my account.
+2. As a shopper I want to be able to Sort products based on type of product so that Ican find products based on what I want.
+3. As a shopper I want to be able to sort products based on category so that I can find the best rated/priced products.
+4. As a shopper I want to be able to add products to a cart so that I can save products im interested in.
+5. As a shopper I want to be able to select a quantity of the product to add to the cart so that I can add more than one of the same product to my cart
+6. As a shopper I want to be able to view the price of my entire cart so that I can be aware of how much it costs.
+7. As a shopper I want to be able to update the quantity of a product in my cart so that I can easily make changes in my cart.
+8. As a shopper I want to be able to delete products from my cart so that I can remove products Idont want to buy.
+9. As a shopper I want to be able to easily checkout and enter my shipping details so that I can feel comftrable and safe when placing my order
+10. As a shopper I want to be able to make a purchase using my debit/credit card so that I can pay for my order right away.
+11. As a shopper I want to be able to recive a confirmation email so that I can feel safe that the order went through and keep record of my orders.
+12. As a shopper I want to be able to view an order confirmation so that I can verify that my order details are correct.
+13. As a shopper I want to be able to easily contact the store so that I can ask them questions and get assistans if needed.
+14. As a shopper I want to be able to read course reviews so that I can find new good courses to try out.
+15. As a shopper I want to be able to sign up to a newsletter so that I can be the first one to hear about new arrivals and deals.
+16. As a shopper I want to be able to register for an account so that I can see my previous orders and save my shipping details.
+17. As a shopper I want to be able to login/logout so that I can Access my profile.
+18. As a shopper I want to be able to recover my password if I forgot it so that I can recover my account.
 
 ## Site Owner
 
 1. As a store owner I want to be able to add products so that I can add new products to my store
 2. As a store owner I want to be able to edit already existing products so that I can manage products, ex. update images, price, description etc.
-3. As a store owner I want to be able to delete products so that I can remove products i dont want to sell anymore.
+3. As a store owner I want to be able to delete products so that I can remove products Idont want to sell anymore.
 4. As a store owner I want to be able to see customer reviews on products so that I can know if the product is appricated or not.
-5. As a store owner I want to be able to send emails to customers that signed up to my newsletter so that i can notify them of any new arrivals or upcomming deals to increse sales.
+5. As a store owner I want to be able to send emails to customers that signed up to my newsletter so that I can notify them of any new arrivals or upcomming deals to increse sales.
 
 # Scope
 
@@ -117,7 +116,7 @@ The Order model holds all order details of an order placed by a user. The OrderL
 
 ## Profile
 The Profile model makes it possible for users to create an account that
-contains all of the their past orders and their prefered shipping details to allow faster and easier checkouts in the future. This also improves the user experience. For this project i used djangos user model togehter with django allauth to make sure every users information is stored sercurly.
+contains all of the their past orders and their prefered shipping details to allow faster and easier checkouts in the future. This also improves the user experience. For this project Iused djangos user model togehter with django allauth to make sure every users information is stored sercurly.
 
 ## Review 
 The Review model lets users that bought a product rate it and leave a message for the site owner. The products rating changes based on user reviews.
@@ -150,7 +149,7 @@ All Wireframes were created using [Balsamiq](https://balsamiq.cloud/)
 # Marketing Strategies
 
 ## Business Plan
-Pro Disc is a B2C business built and designed to sell disc golf discs, appropriate accesories and to create a fanbase of disc golf lovers. Before i started building this website I wrote a marketing plan which you can see below:
+Pro Disc is a B2C business built and designed to sell disc golf discs, appropriate accesories and to create a fanbase of disc golf lovers. Before I started building this website I wrote a marketing plan which you can see below:
 
 Theese are the questions I answered to decide how to market the business the best.
 
@@ -178,7 +177,7 @@ The site has its own facebook page witch will be one of our main marketing platf
 
 ## SEO
 
-I used [soovle](https://soovle.com) to find good keywords to use throughout the website. I then googled theese words to see what type of websites that were showing up. As expected alot of stores and courses were showing up so i knew i had a few good keywords such as Disc Golf, Disc Golf Lovers, Putt & approach and a few more.
+I used [soovle](https://soovle.com) to find good keywords to use throughout the website. I then googled theese words to see what type of websites that were showing up. As expected alot of stores and courses were showing up so I knew I ad a few good keywords such as Disc Golf, Disc Golf Lovers, Putt & approach and a few more.
 
 The site has been equipped with a sitemap generated by [xml-sitemaps](https://www.xml-sitemaps.com/) and a robots.txt file.
 
@@ -226,7 +225,7 @@ The products are displayed side by side with an image, name, description, price 
 ### Product Detail Page
 <img src="readme_assets/product-detail.png">
 The Products Detail page contains a link at the top witch lets the user know what product they are viewing and lets them go back to either the product page or the home page. 
-The page is divided into two sides. The left side contains the product image and the right side contains the products sku, name, rating, price and description. Beneth this the user can select a quantity they wish to add to their bag and then by clickling the "Add to Bag" button the selected quantity is added to their cart. Under the "Add to Bag" button other customers reviews are shown.
+The page is divided into two sides. The left side contains the product image and the right side contains the products sku, name, rating, price and description. Beneth this the user can select a quantity they wish to add to their bag and then by clickling the "Add to Cart" button the selected quantity is added to their cart. Under the "Add to Cart" button other customers reviews are shown.
 
 ### Toasts
 <img src="readme_assets/toast.png">
@@ -332,7 +331,7 @@ To fork or make a clone of this repository, follow theese steps:
 In order to take payments for the online store I implemented Stripe, you first have to create an account with them and then using the [documentation](https://stripe.com/docs) add the relevant HTML, Python and JavaScript code suitible for your project needs.
 
 ## AWS Static and Media Storage
-All static and media files are stored in the cloud using Amazon AWS S3. I created a bucket, user group and user that can access this site and the relevant files. In order for the files to be correctly served the following setting have to be added to your settings.py file in your project directory:
+All static and media files are stored in the cloud using Amazon AWS S3. Iccreated a bucket, user group and user that can access this site and the relevant files. In order for the files to be correctly served the following setting have to be added to your settings.py file in your project directory:
 
 <img src="readme_assets/aws.png">
 
@@ -386,9 +385,9 @@ To send confirmation emails and all Allauth related email when the deployed vers
 
 
 # Credits
-The project walkthrough Boutique Ado from Code Institute original repo.
-The structure of this readme has been influenced by alot of diffrent readme files but the one that stuck out the most and i really liked was by SamanthaBooth81 for their Project 5.
-Withour [Stack overflow](https://stackoverflow.com/) i would never have been able to complete this project. Now that i've studied full stack development for a while im getting more and more comfortable with knowing what i should search for to get the best results and once I figured that out stack overflow is a really good weapon to have in your arsenal.
+The project walkthrough Boutique Ado from Code Institute original repository.
+The structure of this readme has been influenced by alot of diffrent readme files but the one that stuck out the most and Ireally liked was by SamanthaBooth81 for their Project 5.
+Without [Stack overflow](https://stackoverflow.com/) Iwould never have been able to complete this project. Now that i've studied full stack development for a while im getting more and more comfortable with knowing what Ishould search for to get the best results and once Ifigured that out stack overflow is a really good weapon to have in your arsenal.
 
 # Acknowledgements
 I want to thank my mentor Akshat for pointing me in the right direction and Code Institutes awsome Tutors for their patience and putting up with me even though im really stupid at times.
