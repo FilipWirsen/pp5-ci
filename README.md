@@ -172,38 +172,39 @@ The nav bar consists of a logo, search bar, account link, cart link, dropdown me
 <img src="readme_assets/home-page.png">
 
 ### Footer
-
 <img src="readme_assets/footer.png">
+The footer has the same colors as the navbar and features information about the company, our social media links, usefull links on the website and our contact information. The footer also contains a form where users can sign up to our newsletter.
 
 ### Deals Page
-
 <img src="readme_assets/deals.png">
+The Deals page displays all products that are have a discount.
 
 ### Course Reviews Page
-
 <img src="readme_assets/course-reviews.png">
+The course reviews page shows all of our reviews and helps the user find new exciting courses to visit.
 
 ### Contact Page
-
 <img src="readme_assets/contact-page.png">
+The contact page contains all of our contact information
 
 ### Profile Page
-
 <img src="readme_assets/profile.png">
+The Profile page has a form on the left side that lets the user save their prefered shipping details, on the right side it displays all of the users past orders.
 
 
 ### Cart Page
-
 <img src="readme_assets/cart.png">
-
+The Cart page contains an overview of all of the items added by the user, the information is displayed in a table that contains a product info field, price field, quantity field and a subtotal field, the user can also change the quantity and update the table or they can delete a product from the table by clicking the "delete" button. If the cart is empty the user table is empty and the page contains the text "Your cart is empty." And shows the "Keep Shopping" button.
 
 ### Product Page
-
 <img src="readme_assets/products.png">
+The Product page contains a sort select to filter the products price, rating and name.
+The products are displayed side by side with an image, name, description, price and rating.
 
 ### Product Detail Page
-
 <img src="readme_assets/product-detail.png">
+The Products Detail page contains a link at the top witch lets the user know what product they are viewing and lets them go back to either the product page or the home page. 
+The page is divided into two sides. The left side contains the product image and the right side contains the products sku, name, rating, price and description. Beneth this the user can select a quantity they wish to add to their bag and then by clickling the "Add to Cart" 
 
 ### Toasts
 
