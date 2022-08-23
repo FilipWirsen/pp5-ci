@@ -8,6 +8,7 @@
 This is a full-stack e-commerce project I build using Python, JavaScript, HTML and CSS.
 I created this website for a friends business that sells golf discs.
 
+
 # Content
 
 [User Experience](#user-experience)
@@ -240,9 +241,109 @@ The Add Product page looks the same as the edit product page except the form is 
 
 # Technologies Used
 
+I have used several technologies that have enabled this design to work:
+
+### Django
+* Django is the framework that has been used to build the project and its apps.
+### Python
+* Python is the core programming language used to write all of the core functions in this application to make it fully functional.
+### Bootstrap
+* Used for creating responsive design.
+### Google Fonts
+* Used to obtain the font used on the website.
+### Font Awesome
+* Used to obtain all icons used for this project.
+### Google Developer Tools
+* Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+### GitHub
+* Used to store code for the project after being pushed.
+### Git
+* Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+### Gitpod
+* Used as the development environment.
+### Heroku
+* Used to deploy my application.
+### Lucidchart
+* Used to create the database schema for the project.
+### Pep8
+* Used to test my code for any issues or errors.
+### W3C Markup Validation Service
+* Used to validate all HTML code written and used in this webpage.
+### W3C CSS Validation Service
+* Used to validate all CSS code written and used in this webpage.
+### JSHint
+* Used to validate JS code
+### Techsini
+* Used to generate responsive image used in README file.
+### SQLite
+* I have SQLite to run my database tests locally.
+### PostgreSQL
+* I have used Heroku's PostgreSQL relational database in deployment to store the data for my models.
+### AWS
+* I used Amazon AWS S3 to store all of my static and media files.
+
 # Testing
 
+
+
 # Deployment 
+
+## Forking the GitHub Repository
+To fork or make a clone of this repository, follow theese steps:
+
+1. Access your Github account and find the relevant repository.
+2. Click on 'Fork' on the top right of the pgae.
+3. You will find a copy of the repository in your own GitHub account.
+
+## Making a Local Clone
+1. Access your Github account and find the relevant repository.
+2. Click the 'Code' button next to 'Add file'.
+3. Clone the repository by using HTTPS, under clone with HTTPS, copy the link.
+4. Open Git Bash.
+5. Access the directory you want the clone to have
+6. In your IDE's terminal type 'git clone' and paste the URL you copied, press enter.
+8. You now have a local clone!.
+
+## Stripe
+In order to take payments for the online store I implemented Stripe, you first have to create an account with them and then using the [documentation](https://stripe.com/docs) add the relevant HTML, Python and JavaScript code suitible for your project needs.
+
+## AWS Static and Media Storage
+All static and media files are stored in the cloud using Amazon AWS S3. I created a bucket, user group and user that can access this site and the relevant files. In order for the files to be correctly served the following setting have to be added to your settings.py file in your project directory:
+
+<img src="readme_assets/aws.png">
+
+## Gmail SMTP
+To send confirmation emails and all Allauth related email when the deployed version is used I used the following documentation to set it up and added theese settings to my settings.py file:
+
+<img src="readme_assets/email.png">
+
+## Heroku
+### In your app
+1. Add the list of requirements by using the terminal and typing 'pip3 freeze > requirements.txt'
+2. Git add, commit and push to commit and push your new changes. 
+
+### Log into heroku
+3. Log into Heroku or create a new account.
+4. In the top right corner click, 'New' and choose the option 'Create new app'. If you are a new user the 'Create new app' button will appear in the middle of the screen.
+5. Choose your app name, it has to be unique and cannot be the same as this projects name.
+6. Choose the region closest to you. 
+7. Click 'Create app'.
+### Inside your new app page
+8. Go to the 'Resources' Tab, Add-ons, search and add Heroku Postgres.
+9. Choose 'Settings' from the menu on the top of the page.
+10. Go to the section 'Config Vars' and click on the button 'Revel Config Vars'.
+11. Add all variables neccesary for your project, for mine its the following:
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+* DATABASE_URL
+* EMAIL_HOST_PASS
+* EMAIL_HOST_USER
+* SECRET_KEY, generated via [Secret Key Generator](https://djecrety.ir/)
+* STRIPE_PUBLIC_KEY
+* STRIPE_SECRET_KEY
+* STRIPE_WH_SECRET
+* USE_AWS
+### Go Back to Your Code
 
 # Credits
 
