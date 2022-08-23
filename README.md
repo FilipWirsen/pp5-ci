@@ -1,5 +1,6 @@
 <h1>Pro Disc</h1>
 
+<img src="readme_assets/responsive-img.png">
 
 ### **Live Site**
 [Pro Disc](https://ci-pp5-e-commerce.herokuapp.com/)
@@ -51,12 +52,13 @@ And the most important functionality for the site owner is the following:
 9. As a shopper I want to be able to easily checkout and enter my shipping details so that i can feel comftrable and safe when placing my order
 10. As a shopper I want to be able to make a purchase using my debit/credit card so that i can pay for my order right away.
 11. As a shopper I want to be able to recive a confirmation email so that i can feel safe that the order went through and keep record of my orders.
-12. As a shopper I want to be able to easily contact the store so that i can ask them questions and get assistans if needed.
-13. As a shopper I want to be able to read course reviews so that i can find new good courses to try out.
-14. As a shopper I want to be able to sign up to a newsletter so that i can be the first one to hear about new arrivals and deals.
-15. As a shopper I want to be able to register for an account so that i can see my previous orders and save my shipping details.
-16. As a shopper I want to be able to login/logout so that i can Access my profile.
-17. As a shopper I want to be able to recover my password if i forgot it so that i can recover my account.
+12. As a shopper i want to be able to view an order confirmation so that i can verify that my order details are correct.
+13. As a shopper I want to be able to easily contact the store so that i can ask them questions and get assistans if needed.
+14. As a shopper I want to be able to read course reviews so that i can find new good courses to try out.
+15. As a shopper I want to be able to sign up to a newsletter so that i can be the first one to hear about new arrivals and deals.
+16. As a shopper I want to be able to register for an account so that i can see my previous orders and save my shipping details.
+17. As a shopper I want to be able to login/logout so that i can Access my profile.
+18. As a shopper I want to be able to recover my password if i forgot it so that i can recover my account.
 
 ## Site Owner
 
@@ -156,10 +158,8 @@ Users are able to sign up to our newsletter to be the first ones to hear about n
 <img src="readme_assets/newsletter.png">
 
 ### Facebook
-
-### Instagram
-
-### Twitter
+<img src="readme_assets/facebook.png">
+The site has its own facebook page witch will be one of our main marketing platforms.
 
 # Features
 
@@ -238,6 +238,8 @@ The Add Product page looks the same as the edit product page except the form is 
 
 
 ### Error Pages
+<img src="readme_assets/404-page.png">
+This page will be shown to users that visit a url that doesnt exsist and will make them able to go back to the home page.
 
 # Technologies Used
 
@@ -283,8 +285,7 @@ I have used several technologies that have enabled this design to work:
 * I used Amazon AWS S3 to store all of my static and media files.
 
 # Testing
-
-
+ [Testing can be found here](https://github.com/FilipWirsen/pp5-ci/tree/main/docs/testing/TESTING.md)
 
 # Deployment 
 
@@ -362,9 +363,9 @@ To send confirmation emails and all Allauth related email when the deployed vers
 
 
 # Credits
+The project walkthrough Boutique Ado from Code Institute original repo.
+The structure of this readme has been influenced by alot of diffrent readme files but the one that stuck out the most and i really liked was by SamanthaBooth81 for their Project 5.
+Withour [Stack overflow](https://stackoverflow.com/) i would never have been able to complete this project. Now that i've studied full stack development for a while im getting more and more comfortable with knowing what i should search for to get the best results and once I figured that out stack overflow is a really good weapon to have in your arsenal.
 
 # Acknowledgements
-
-
-# Wireframes
-To create the website design i used [Balsamiq](https://balsamiq.cloud) and to create the database diagram i used [Lucidchart](https://www.lucidchart.com)
+I want to thank my mentor Akshat for pointing me in the right direction and Code Institutes awsome Tutors for their patience and putting up with me even though im really stupid at times.

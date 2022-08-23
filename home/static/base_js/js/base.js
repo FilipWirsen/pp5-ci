@@ -20,15 +20,15 @@ window.onscroll = function () {
     }
 
     function hide_header(scrollposition) {
-        var MaxWidth = window.matchMedia("(max-width: 750px)")
+        var MaxWidth = window.matchMedia("(max-width: 750px)");
         if (MaxWidth.matches) {
-            var header = document.getElementById('header')
+            var header = document.getElementById('header');
             if (scrollposition < 500) {
-                header.classList.remove('d-none')
-                header.classList.add('d-block')
+                header.classList.remove('d-none');
+                header.classList.add('d-block');
             } else {
-                header.classList.remove('d-block')
-                header.classList.add('d-none')
+                header.classList.remove('d-block');
+                header.classList.add('d-none');
             }
         }
 
