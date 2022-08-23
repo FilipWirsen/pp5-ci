@@ -1,8 +1,8 @@
-<h1>Disc Golf</h1>
+<h1>Pro Disc</h1>
 
 
 ### **Live Site**
-[Disc Golf](https://ci-pp5-e-commerce.herokuapp.com/)
+[Pro Disc](https://ci-pp5-e-commerce.herokuapp.com/)
 
 # About
 This is a full-stack e-commerce project I build using Python, JavaScript, HTML and CSS.
@@ -14,11 +14,11 @@ I created this website for a friends business that sells golf discs.
 
 
 # Strategy
- The purpose of this project is to create a website that allows users to purschase products and the site owner to recive all orders. The target audience for theese products are
+ The purpose of this project is to create a website that allows users to purschase products and the site owner to recive all orders. The target audience for theese products are.
 
- * Active people that enjoys nature
- * Those who often play disc golf
- * All ages
+ * Active people that enjoys nature.
+ * Those who often play disc golf.
+ * All ages, mostly men between 20-40.
 
  Thinking aout the main audience i think the most important things for this website to contain is the following:
 
@@ -86,3 +86,153 @@ To achieve my user stories and thinking about the strategy the website will be c
 * Link in the nav to add new products.
 * Links under the product details to edit and delete products.
 * See customer reviews under the product details.
+
+
+# Structure
+
+The project structure looks like the following:
+
+Users are greeted with a homepage that lets them know the purpose of the site right away. At the top of the page there is a clear navigation bar that allows the user to get fast access to whatever part of the website their most interested in. If the user scrolls down they can see our best rated prodcuts and below that there's a footer that lets the user sign up to our newsletter, view our social media platforms or get our contact information. Since not all users are going to have an account they can checkout either as a guest or create a personal profile to save past orders and their shipping details.
+
+The website is made of the following apps:
+
+* Home
+* Products
+* Profile
+* Cart
+* Checkout
+* Course Reviews
+
+
+# Database Design
+
+<img src="readme_assets/database-design.png">
+
+
+## Category
+The Category model contains all diffrent product categories and it's purpose is to allow users to filter for diffrent categories.
+
+## Products
+The Products model is makes it possible for the site owner to add products for sale on the site. Each product has a name, description, price, rating and image. The site owner can also add discounts to products to increse sales for that product.
+
+## Order & OrderLineItems
+The Order model holds all order details of an order placed by a user. The OrderLineItems model contains all products in said order. The two models are connected with each other to make this possible.
+
+## Profile
+The Profile model makes it possible for users to create an account that
+contains all of the their past orders and their prefered shipping details to allow faster and easier checkouts in the future. This also improves the user experience. For this project i used djangos user model togehter with django allauth to make sure every users information is stored sercurly.
+
+## Review 
+The Review model lets users that bought a product rate it and leave a message for the site owner. The products rating changes based on user reviews.
+
+## Course Reviews
+The Course Reviews model is created to improve the SEO by linking to external websites and to make users visit the site more frequently and not only to make purchases. The model consists of a course name, author, text, address, rating and image. This model will also make the site more trustworthy.
+
+
+# Marketing Strategies
+
+## Business Plan
+Pro Disc is a B2C business built and designed to sell disc golf discs, appropriate accesories and to create a fanbase of disc golf lovers. Before i started building this website I wrote a marketing plan which you can see below:
+
+Theese are the questions I answered to decide how to market the business the best.
+
+1. Who are your users?
+    * All diffrent ages, mostly men but also women. Most of our users will have an active lifestyle, like all kind of diffrent sports and like to be outdoors.
+2. Where can you find theese users?
+    * Most of our users will be on social platforms such as facebook, instagram and twitter. they´ll follow people with an active lifestyle and people that post about sports.
+3. What are your users needs? Are they looking for specific content and if so what type of content and can you provide it to them?
+    * Most of our users will be intrested in playing the sport disc golf and a great way to help them visit the site more frequently would be to include course reviews so that there's more content than just buying discs.
+4. Is your site going to run sales? When would be the best time to have theese campaigns?
+    * Since Disc golf is a sport you play outdoors and mostly during the summer we will have sales start right before the summer and renew them throughout the whole summer.
+5. How would your users hear about new products or new campaigns?
+    * Most of our users would hear about it either from our newsletter or from any of our social media platforms. We also have plans to sign influencers and make them ambassadors for the website and having them post about us on their social media.
+
+## Marketing platforms
+
+### Newsletter
+Users are able to sign up to our newsletter to be the first ones to hear about new products and campaigns
+
+<img src="readme_assets/newsletter.png">
+
+### Facebook
+
+### Instagram
+
+### Twitter
+
+# Features
+
+### Navigation
+The nav bar consists of a logo, search bar, account link, cart link, dropdown menu to filter for diffrent type of products, link to deals page, link to course reviews page and a link to our contact page.
+
+<img src="readme_assets/navigation.png">
+
+### Home Page
+
+<img src="readme_assets/home-page.png">
+
+### Footer
+
+<img src="readme_assets/footer.png">
+
+### Deals Page
+
+<img src="readme_assets/deals.png">
+
+### Course Reviews Page
+
+<img src="readme_assets/course-reviews.png">
+
+### Contact Page
+
+<img src="readme_assets/contact-page.png">
+
+### Profile Page
+
+<img src="readme_assets/profile.png">
+
+
+### Cart Page
+
+<img src="readme_assets/cart.png">
+
+
+### Product Page
+
+<img src="readme_assets/products.png">
+
+### Product Detail Page
+
+<img src="readme_assets/product-detail.png">
+
+### Toasts
+
+<img src="readme_assets/toast.png">
+
+### Checkout Page
+
+<img src="readme_assets/checkout.png">
+
+### Order Details Page
+
+<img src="readme_assets/order-details.png">
+
+### Product Review Page
+
+<img src="readme_assets/product-review.png">
+
+### Edit Product Page
+
+<img src="readme_assets/edit-product.png">
+
+### Add Product Page
+
+<img src="readme_assets/add-product.png">
+
+### See Reviews
+
+<img src="readme_assets/admin-reviews.png">
+
+
+# Wireframes
+To create the website design i used [Balsamiq](https://balsamiq.cloud) and to create the database diagram i used [Lucidchart](https://www.lucidchart.com)
