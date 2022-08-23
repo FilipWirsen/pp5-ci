@@ -344,6 +344,22 @@ To send confirmation emails and all Allauth related email when the deployed vers
 * STRIPE_WH_SECRET
 * USE_AWS
 ### Go Back to Your Code
+12. Now you need to create a Procfile in the root directory of your project. Its important that the P is in uppercase.
+13. In your newly created Procfile add the following:
+* web: gunicorn PROJECT_NAME.wsgi
+14. In settings.py add Heroku to allowed hosts.
+### Final steps
+15. Go to the 'Deploy' tab in Heroku
+16. Under the section 'Deployment method' choose 'GitHub'
+17. A new section will appear. 'Connect to GitHub', search for the repository name you want to connect to.
+18. Once Heroku finds the repository, click 'connect'
+19. Scroll down to the section 'Automatic Deploys'.
+20. Click 'Enable automatic deploys' or choose 'Deploy branch' and manually deploy.
+21. Click 'Deploy branch'.
+22. Once the program runs you should see the following message:
+* 'The app was successfully deployed'
+23. Click the button 'View'.
+
 
 # Credits
 
