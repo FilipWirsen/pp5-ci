@@ -126,7 +126,26 @@ The Review model lets users that bought a product rate it and leave a message fo
 The Course Reviews model is created to improve the SEO by linking to external websites and to make users visit the site more frequently and not only to make purchases. The model consists of a course name, author, text, address, rating and image. This model will also make the site more trustworthy.
 
 # Wireframes
-All Wireframes were created using [Balsamiq](https://balsamiq.cloud/) and they can be viewed here
+All Wireframes were created using [Balsamiq](https://balsamiq.cloud/)
+
+### Home Page
+
+<img src="readme_assets/home-page-desktop.png">
+<img src="readme_assets/discs-desktop.png">
+<img src="readme_assets/home-page-mobile.png">
+<img src="readme_assets/discs-mobile.png">
+
+### Products Page
+<img src="readme_assets/products-desktop.png">
+<img src="readme_assets/products-mobile.png">
+
+### Product Detail Page
+<img src="readme_assets/product-detail-desktop.png">
+<img src="readme_assets/product-detail-mobile.png">
+
+### Course Reviews
+<img src="readme_assets/course-reviews-desktop.png">
+<img src="readme_assets/course-reviews-mobile.png">
 
 # Marketing Strategies
 
