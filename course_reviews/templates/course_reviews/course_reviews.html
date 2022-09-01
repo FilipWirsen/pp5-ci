@@ -12,11 +12,11 @@
         {% for review in reviews %}
         <div class="col-lg-4 py-4">
             {% if review.image %}
-            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" rel="{{review.name}}" target="_blank">
+            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" rel="external" target="_blank">
                 <img class="rounded-circle img-fluid" alt="Course image" src="{{ review.image.url }}">
             </a>
             {% else %}
-            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" target="_blank">
+            <a href="{% if review.website %}{{ review.website }}{% else %}#{% endif %}" target="_blank" rel="external">
                 <img class="rounded-circle img-fluid" alt="Course image" src="{{ MEDIA_URL }}noimageplaceholder.png">
             </a>
             {% endif %}
