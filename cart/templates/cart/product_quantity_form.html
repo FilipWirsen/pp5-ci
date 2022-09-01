@@ -7,10 +7,8 @@
                 aria-label="quantity field">
         </div>
     </div>
-    <div class="d-flex justify-content-between">
+    <div>
     <button type="submit" class="btn btn-primary btn-sm"><small>Update</small></button>
-    <button type="" class="btn btn-danger btn-sm">
-        <a href="{% url 'remove_from_cart' item.product.id %}" class="remove-item text-white float-right"><small>Remove</small></a>
-    </button>
+    <a href="{% url 'remove_from_cart' item.product.id %}" class="remove-item text-white btn btn-danger float-right btn-sm"><small>Remove</small></a>
     </div>
 </form>
