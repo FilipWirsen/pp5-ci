@@ -61,6 +61,11 @@ And the most important functionality for the site owner is the following:
 4. As a store owner I want to be able to see customer reviews on products so that I can know if the product is appricated or not.
 5. As a store owner I want to be able to send emails to customers that signed up to my newsletter so that I can notify them of any new arrivals or upcomming deals to increse sales.
 
+
+# Agile
+ 
+I have used GitHub issues and projects to implement a basic Agile strategy. I created issues for my user stories and a Kanban board for the project. I've moved each user story from to do to in progress and finally to done to keep track of my user stories and my progress. The Kanban board can be found [here](https://github.com/users/FilipWirsen/projects/4/views/1).
+
 # Scope
 
 To achieve my user stories and thinking about the strategy the website will be created with the following functions:
