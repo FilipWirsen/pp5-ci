@@ -145,7 +145,7 @@ I have chosen the combination of dark grey colors to enhance the neutrality and 
 For the font I  used Oswald witch I imported from [Google Fonts](https://fonts.google.com/about). I used this font for everything because I feel like it has an ability to highlight text and make it feel more natural to read it.
 
 ## Design Choices
-I made the navbar transparent on the home page to make the whole page be covered in the background image. This made the website feel more welcoming and proffesional leaving the user wanting more and therefore making them explore more of the site. I've also added functionality to remove the navbar on mobile devices when scrolling to a certain height to make the user be able to see everything and not have the screen covered by the navbar.
+I made the navbar transparent on the home page to make the whole page be covered in the background image. This made the website feel more welcoming and proffesional leaving the user wanting more and therefore making them explore more of the site. I've also added functionality to remove the navbar on mobile devices when scrolling to a certain height to make the user be able to see everything and not have the screen covered by the navbar. When making the Navbar transparent on the home page the icons for the user account and cart where barely visable so i also had to change their colors to black just for the home page.
 ### Home Page
 
 <img src="readme_assets/home-page-desktop.png">

@@ -132,7 +132,9 @@ I made sure this url is only working for superusers by trying to visit the url a
 * To complete this user story im using Mailchimp witch provides me with both the form to allow users to sign up to the newsletter and the ability to send email to all users that are signed up.
 
 ## Validator Testing
-* The HTML templates were validated using the  [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML files.
+* The HTML templates were validated using the  [W3 Validator](https://validator.w3.org/nu/#textarea) When validating the html files i got two errors but since they were comming from code I took from Code Institutes Boutique Ado project i decided to not try and fix them. My reasoning for this is that if theese where any major errors they would not be there in the first place and i didn't want to break their code. Besides that no other errors returnted from the HTML files. I got the following two errors:
+    * Error: Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.)
+    * Error: Duplicate ID user-options.
 * The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and no errors were returned. All CSS files returned with CSS level 3 + SVG.
 * The JavaScript files were run through [JSHint](https://jshint.com) and no errors were found apart from a few missing semi-colons which were added. Also, the project was run through whilst checking for any issues in the console. No errors were found.
 * The code was validated using[PEP8](http://pep8online.com). No errors were returned.

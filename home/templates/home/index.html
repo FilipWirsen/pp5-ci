@@ -64,7 +64,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
    document.addEventListener('scroll', (e) => {
         let scroll = this.scrollY;
         hide_header_home(scroll)
