@@ -157,6 +157,7 @@ def calc_rating(product):
     return final_rating
 
 
+@login_required()
 def product_review(request, product_id):
     """ Returns review form to leave reviews """
     product = get_object_or_404(Product, pk=product_id)

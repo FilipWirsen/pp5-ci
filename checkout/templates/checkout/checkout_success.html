@@ -66,6 +66,7 @@
                 </div>
             </div>
             <!-- Customer Notes -->
+            {% if user.is_authenticated %}
             <div class="card mb-4">
                 <div class="card-body">
                 <h3 class="h6">Thank you for your order!</h3>
@@ -81,6 +82,15 @@
                 </p>
                 </div>
             </div>
+            {% else %}
+            <div class="card mb-4">
+                <div class="card-body">
+                <h3 class="h6">Thank you for your order!</h3>
+                <p>Thank you for completing your order! All information regarding your order will be sent to {{order.email}}.</p>
+                </div>
+            </div>
+
+            {% endif %}
 
         </div>
         <div class="col-lg-4">
